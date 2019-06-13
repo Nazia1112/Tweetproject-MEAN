@@ -1,0 +1,29 @@
+#cardId{
+    
+    margin-top: 100px;
+    opacity: .8;
+ }
+ 
+ h2{
+     text-align: center
+ }
+ 
+ #container1{
+     width: 700px;
+ }
+ 
+ #btn{
+ 
+    float: right;
+ }
+ 
+ button{
+     margin-left: 280px;
+ }
+ 
+ h6{
+     text-align: center;
+ }
+ a:hover {
+    color: black;
+  }

@@ -1,0 +1,35 @@
+<br><br>
+<div class="container">
+  <div class="card">
+    <br>
+    <div class="container">
+      <h2>Tweet</h2>
+      <form [formGroup]="tweetForm" (ngSubmit)="tweet()">
+
+        <div class="form-group">
+          <textarea [mention]="users" [mentionConfig]="{triggerChar:'@',maxItems:10,labelKey:'name'}" class="form-control" rows="5" id="comment" placeholder="write.." formControlName="tweet" type="text" maxlength="1024" (change)="inputChange($event.target)" required ></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-dark" [disabled]="!this.tweetForm.valid">
+          <i class="fas fa-sign-in-alt"></i> Post</button><br><br>
+       
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  
+    <h3>All Tweets</h3>
+    <div class="container">
+      <br>
+      <div *ngFor = "let res of response">
+        {{res.tweet}}
+        <br>{{res.createdAt | date :'short'}}&nbsp;
+        <br> by {{res.author.username}}<hr>
+       <br>
+      </div>
+    </div>
+ 
+</div>

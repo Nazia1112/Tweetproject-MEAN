@@ -1,0 +1,14 @@
+<br>
+<div class="container">
+  <div *ngIf="mentioned">
+    <h3> Mentioned Tweets </h3>
+    <div *ngFor="let tweet of mentioned" class="card">
+      <br>
+      <div class="container">
+        <p> {{tweet.tweet}} </p>
+        <p> -- {{tweet.createdAt | date :'short'}} </p>
+        <p>by- {{tweet.author.username}}</p>
+      </div>
+    </div>
+  </div>
+</div>

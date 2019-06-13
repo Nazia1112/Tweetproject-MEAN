@@ -1,0 +1,6 @@
+.navbar a:hover, .nav-item dropdown:hover {
+    border-radius: 50px;
+    opacity: 0.3;
+    font-family: cursive;
+  }
+  

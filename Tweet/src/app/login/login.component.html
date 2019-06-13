@@ -1,0 +1,25 @@
+<div class="container" id="container1">
+  <div class="card" id="cardId">
+    <br>
+    <h2>LogIn </h2>
+    <div class="container">
+      <form id="form" [formGroup]="Logindata" (ngSubmit)="login()">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="username" class="form-control" placeholder="Username" formControlName="username" required>
+
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark" [disabled]="!this.Logindata.valid">
+          <i class="fas fa-sign-in-alt"></i> Submit</button><br><br>
+        <a href="/user/register">
+         <h6> New Here, Click here to register <i class="fas fa-user-plus"></i> </h6>
+          <br></a>
+      </form>
+    </div>
+  </div>
+</div>
